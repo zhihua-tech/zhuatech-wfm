@@ -64,3 +64,7 @@ npm run dev:demo
 | ![知华科技微信咨询二维码一](docs/images/zhuatech-wechat-consulting.png) | ![知华科技微信咨询二维码二](docs/images/zhuatech-wechat-consulting-2.png) |
 
 关键词：WFM 源码、劳动力管理系统、智能排班、人员预测、现场调度、客服排班、Java WFM、Vue 排班系统、知华科技。
+
+## 人力覆盖预测
+
+新增 `POST /api/wfm/insights/staffing-coverage`，按预测需求、平均处理时长、时间区间、收缩率和目标占用率计算所需人数与排班缺口，输出 `COVERED / TIGHT / UNDERSTAFFED`，并给出跨技能支援和错峰安排建议。
