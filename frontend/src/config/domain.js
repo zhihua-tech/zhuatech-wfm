@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'WFM',systemName:'劳动力管理平台',englishName:'WORKFORCE MANAGEMENT',theme:{primary:'#3b5f84',dark:'#27394d',accent:'#bb7939'},
  workspace:'运营管理中心 / 劳动力计划',fieldWorkspace:'华东客服中心',period:'2026-08-01 · 周六',liveText:'排班覆盖率于 09:52 更新',fieldContextLabel:'当前班组',fieldContext:'华东一线 · 早班',fieldUser:'江澄',fieldRole:'现场主管',adminUser:'许宁',adminRole:'劳动力计划经理',
