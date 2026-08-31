@@ -68,3 +68,7 @@ npm run dev:demo
 ## 人力覆盖预测
 
 新增 `POST /api/wfm/insights/staffing-coverage`，按预测需求、平均处理时长、时间区间、收缩率和目标占用率计算所需人数与排班缺口，输出 `COVERED / TIGHT / UNDERSTAFFED`，并给出跨技能支援和错峰安排建议。
+
+## 企业级排班合规治理
+
+新增 `POST /api/enterprise/wfm/schedule-compliance-governance`，检查工时上限、休息、持证覆盖、例外审批、需求覆盖、加班预算和员工偏好，返回 `PUBLISH / REVIEW / BLOCKED`。详见 [排班合规说明](docs/ENTERPRISE_SCHEDULE_COMPLIANCE.md)。
