@@ -10,8 +10,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class StaffingCoverageService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result forecast(Request request) {
         double workloadHours = request.forecastDemand() * request.averageHandleMinutes() / 60D;
         double productiveHoursPerAgent = request.intervalMinutes() / 60D
@@ -27,10 +33,16 @@ public class StaffingCoverageService {
             requiredAgents, request.scheduledAgents(), staffingGap, status, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private double round(double value) {
         return Math.round(value * 100D) / 100D;
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String intervalCode, @Min(0) int forecastDemand,
                           @DecimalMin("0.1") double averageHandleMinutes,
                           @Min(1) int intervalMinutes,
@@ -38,6 +50,9 @@ public class StaffingCoverageService {
                           @DecimalMin("0.1") @DecimalMax("1") double targetOccupancy,
                           @Min(0) int scheduledAgents) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String intervalCode, double workloadHours,
                          double productiveHoursPerAgent, int requiredAgents,
                          int scheduledAgents, int staffingGap, String status,

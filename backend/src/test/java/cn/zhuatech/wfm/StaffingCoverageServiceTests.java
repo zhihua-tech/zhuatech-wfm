@@ -6,9 +6,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class StaffingCoverageServiceTests {
     private final StaffingCoverageService service = new StaffingCoverageService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void identifiesUnderstaffedServiceInterval() {
         var result = service.forecast(new StaffingCoverageService.Request(
@@ -20,6 +26,9 @@ class StaffingCoverageServiceTests {
         assertEquals("UNDERSTAFFED", result.status());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void recognizesCoveredInterval() {
         var result = service.forecast(new StaffingCoverageService.Request(

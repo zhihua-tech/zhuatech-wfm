@@ -8,8 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ScheduleComplianceGovernanceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -33,6 +39,9 @@ public class ScheduleComplianceGovernanceService {
         return new Assessment(Decision.PUBLISH, true, blockers, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String scheduleId, @Min(0) double plannedHours,
                           @Min(1) double legalMaximumHours, @Min(0) double restHoursBeforeShift,
                           @Min(0) double minimumRestHours, boolean mandatoryBreaksPlanned,
@@ -42,7 +51,13 @@ public class ScheduleComplianceGovernanceService {
                           @Min(0) @Max(100) int demandCoveragePercent,
                           @Min(0) long overtimeCostCents, @Min(0) long overtimeBudgetCents,
                           boolean employeePreferenceReviewed) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(Decision decision, boolean publishable, List<String> blockers,
                              List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { PUBLISH, REVIEW, BLOCKED }
 }
