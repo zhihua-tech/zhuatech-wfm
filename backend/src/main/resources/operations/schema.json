@@ -1,0 +1,97 @@
+{
+  "slug": "wfm",
+  "title": "跨班休息间隔与净工时校验",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "previousEnd",
+      "label": "上班次结束分钟",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "20160"
+    },
+    {
+      "key": "start",
+      "label": "本班开始分钟",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "20160"
+    },
+    {
+      "key": "end",
+      "label": "本班结束分钟",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "20160"
+    },
+    {
+      "key": "breakMinutes",
+      "label": "本班休息分钟",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1440"
+    },
+    {
+      "key": "minimumRest",
+      "label": "最小间隔分钟",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "10080"
+    },
+    {
+      "key": "maximumWork",
+      "label": "净工时上限分钟",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1440"
+    }
+  ],
+  "columns": [
+    {
+      "key": "restMinutes",
+      "label": "实际间隔分钟"
+    },
+    {
+      "key": "missingRest",
+      "label": "休息缺口分钟"
+    },
+    {
+      "key": "netMinutes",
+      "label": "净工作分钟"
+    },
+    {
+      "key": "excessMinutes",
+      "label": "超限分钟"
+    }
+  ],
+  "description": "以同一周零点为分钟原点，核对跨日班次的休息间隔、休息扣除及输入的班次净工时上限；不自动排班。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "previousEnd": "1080",
+        "start": "1920",
+        "end": "2400",
+        "breakMinutes": "60",
+        "minimumRest": "660",
+        "maximumWork": "480"
+      }
+    ]
+  }
+}

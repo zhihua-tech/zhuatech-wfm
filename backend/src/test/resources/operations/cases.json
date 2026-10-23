@@ -1,0 +1,58 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "restMinutes": "#840",
+      "netMinutes": "#420",
+      "missingRest": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "start": "1500",
+      "end": "1980"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "missingRest": "#240"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "end": "2520"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "excessMinutes": "#60"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "start": "1000"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "breakMinutes": "481"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "start": "1740",
+      "end": "2220"
+    },
+    "expected": {
+      "decision": "PASS",
+      "restMinutes": "#660"
+    },
+    "error": false
+  }
+]
